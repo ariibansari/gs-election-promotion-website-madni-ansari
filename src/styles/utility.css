@@ -10,7 +10,7 @@
     --color-3: #002831;
     --color-3-accent: #0083a0;
 
-    --color-4: rgb(255, 0, 234);
+    --color-4: rgb(218, 16, 133);
     --color-4-accent: red;
 
     /* Font Sizes */
@@ -51,7 +51,7 @@ div {
     font-size: var(--small-font-size);
 }
 
-p b{
+p b {
     font-weight: 600;
 }
 
@@ -79,7 +79,8 @@ p b{
 
 .section {
     min-height: 50dvh;
-    padding: 8dvh 3dvw;
+    padding: 4dvh 3dvw 4dvh 3dvw;
+    overflow-x: hidden;
 }
 
 .container {
@@ -101,4 +102,11 @@ p b{
 
 .button:hover {
     background-color: var(--color-2-accent);
+}
+
+.button-ghost {
+    background-color: transparent;
+    border: 1px solid var(--color-2);
+    color: var(--color-2);
+    font-size: var(--tiny-font-size);
 }

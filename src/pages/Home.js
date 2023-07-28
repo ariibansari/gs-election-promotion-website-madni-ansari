@@ -1,7 +1,46 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "../styles/home.css"
+import ImageViewer from '../components/ImageViewer';
 
 const Home = () => {
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const [selectedImgSrc, setSelectedImgSrc] = useState("")
+
+    const handleImageClick = (e) => {
+        setSelectedImgSrc(e.target.getAttribute("src"))
+        handleShow()
+    }
+
+    const [showAllAccomplishments, setShowAllAccomplishments] = useState(false)
+
+
+
+    const imageViewerRef = useRef(null)
+    useClickOutside(imageViewerRef)
+
+    function useClickOutside(ref) {
+        useEffect(() => {
+            /**
+             * Alert if clicked on outside of element
+             */
+            function handleClickOutside(event) {
+                if (ref.current && !ref.current.contains(event.target)) {
+                    handleClose()
+                }
+            }
+            // Bind the event listener
+            document.addEventListener("mousedown", handleClickOutside);
+            return () => {
+                // Unbind the event listener on clean up
+                document.removeEventListener("mousedown", handleClickOutside);
+            };
+        }, [ref]);
+    }
+
     return (
         <main id="home">
             <section id="hero" className='full-height flex-centered flex-column'>
@@ -50,6 +89,8 @@ const Home = () => {
                 <div className='hero-overlay'></div>
 
             </section>
+
+
             <section id="about-me" className='section'>
                 <h2>Why Me?</h2>
                 <video className='video-player' controls>
@@ -59,7 +100,7 @@ const Home = () => {
                     <img src="./images/temp/profile.jpg" className='profile-picture' alt="profile" />
                     <p>
                         Madni Ansari
-                        <span>madni@gmail.cmo | 21yr Old</span>
+                        <span>madni@gmail.com | 21yr Old</span>
                     </p>
                 </div>
                 <p>
@@ -80,8 +121,61 @@ const Home = () => {
                         #TogetherWeThrive
                     </span>
                 </p>
-
+                <div className='pattern right'>
+                    <img src="./images/pattern.webp" alt="pattern" />
+                </div>
             </section>
+
+
+            <section id="achievements" className='section'>
+                <h2>My Achievements</h2>
+                <div className='achievement-container'>
+                    <div className='achievement'>
+                        <h4>Internship at Delta Thermoformers</h4>
+                        <img src="./images/temp/letter-of-intership.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
+                        <img src="./images/temp/certificate-internship.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
+                    </div>
+                </div>
+                <div className='achievement-container'>
+                    <div className='achievement'>
+                        <h4>Tech Fest IIT Bombay</h4>
+                        <img src="./images/temp/certificate-iit-bombay.jpeg" alt="certificate of achievement" onClick={e => handleImageClick(e)} />
+                    </div>
+                </div>
+                <div className='achievement-container'>
+                    <div className='achievement'>
+                        <h4>Certificate of Achievement</h4>
+                        <img src="./images/temp/certificate-achievement.jpeg" alt="certificate of achievement" onClick={e => handleImageClick(e)} />
+                    </div>
+                </div>
+                {!showAllAccomplishments
+                    &&
+                    <div className='show-more'>
+                        <button className='button button-ghost' onClick={() => setShowAllAccomplishments(true)}>Show More</button>
+                    </div>
+                }
+                {showAllAccomplishments
+                    &&
+                    <>
+                        <div className='achievement-container'>
+                            <div className='achievement'>
+                                <h4>Certificate of Commitment</h4>
+                                <img src="./images/temp/certificate-commitment.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
+                            </div>
+                        </div>
+                        <div className='achievement-container'>
+                            <div className='achievement'>
+                                <h4>Certificate of Appreciation</h4>
+                                <img src="./images/temp/certificate-appreciation.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
+                            </div>
+                        </div>
+                    </>
+                }
+            </section>
+
+
+            <ImageViewer src={selectedImgSrc} show={show} imageViewerRef={imageViewerRef} />
+
         </main>
     )
 }
