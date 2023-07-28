@@ -7,7 +7,7 @@ const Home = () => {
             <div id="hero" className='full-height flex-centered flex-column'>
                 <h1>Madni Ansari</h1>
                 <h2>General Secretary Candidate</h2>
-                <p>Loading...</p>
+                <p>Website Under Development...</p>
             </div>
         </section>
     )
