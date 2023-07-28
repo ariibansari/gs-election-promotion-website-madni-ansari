@@ -7,8 +7,8 @@
     --color-2: rgb(29, 29, 29);
     --color-2-accent: rgb(48, 48, 48);
 
-    --color-3: rgb(255, 255, 255);
-    --color-3-accent: rgb(255, 255, 255);
+    --color-3: #002831;
+    --color-3-accent: #003946;
 
     --color-4: red;
     --color-4-accent: red;
@@ -17,13 +17,14 @@
     --tiny-font-size: 12px;
     --small-font-size: 18px;
     --medium-font-size: 21px;
-    --large-font-size: 32px;
+    --large-font-size: 36px;
 }
 
 body {
     font-family: 'Poppins', sans-serif !important;
     background-color: var(--color-1);
 }
+
 
 
 h1 {
@@ -56,15 +57,29 @@ div {
     flex-direction: column;
 }
 
+.reverse-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 96%;
+}
+
+.container {
+    padding-left: 3dvw;
+    padding-right: 3dvw;
+}
+
 
 .button {
     padding: .7rem 2rem;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     color: var(--color-1);
     background-color: var(--color-2);
     transition: all 150ms linear;
     cursor: pointer;
+    font-size: var(--small-font-size);
 }
 
 .button:hover {
