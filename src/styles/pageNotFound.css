@@ -1,0 +1,7 @@
+#page-not-found img {
+    width: 10rem;
+}
+
+#page-not-found h1 {
+    font-size: var(--large-font-size);
+}
