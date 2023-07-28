@@ -35,10 +35,16 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    font-size: var(--small-font-size);
 }
 
 .button-cta:hover {
     background-color: var(--color-1-accent);
+}
+
+.hero-content .subtitle {
+    font-size: var(--small-font-size);
+    color: var(--color-1-accent);
 }
 
 .hero-content h1 {
@@ -46,7 +52,7 @@
     font-weight: 400;
 }
 
-.hero-content h2 {
+.hero-content h3 {
     color: var(--color-1);
     font-weight: 300;
     margin-bottom: 2rem;
@@ -107,4 +113,9 @@
 
 .calender .date span {
     font-size: var(--tiny-font-size);
+}
+
+
+.hash-tag{
+    color: var(--color-4);
 }

@@ -2,22 +2,23 @@
 
 :root {
     --color-1: #fafcfa;
-    --color-1-accent: #e6e6e6;
+    --color-1-accent: #dfdfdf;
 
     --color-2: rgb(29, 29, 29);
     --color-2-accent: rgb(48, 48, 48);
 
     --color-3: #002831;
-    --color-3-accent: #003946;
+    --color-3-accent: #0083a0;
 
-    --color-4: red;
+    --color-4: rgb(255, 0, 234);
     --color-4-accent: red;
 
     /* Font Sizes */
     --tiny-font-size: 12px;
-    --small-font-size: 18px;
+    --small-font-size: 16px;
     --medium-font-size: 21px;
-    --large-font-size: 36px;
+    --large-font-size: 30px;
+    --extra-large-font-size: 36px;
 }
 
 body {
@@ -28,14 +29,22 @@ body {
 
 
 h1 {
-    font-size: var(--large-font-size);
+    font-size: var(--extra-large-font-size);
     margin: 0;
 }
 
+
 h2 {
+    font-size: var(--large-font-size);
+    font-weight: 500;
+    margin: 0;
+}
+
+h3 {
     font-size: var(--medium-font-size);
     margin: 0;
 }
+
 
 p,
 div {
@@ -44,7 +53,7 @@ div {
 
 
 .full-height {
-    height: 100vh;
+    height: 100dvh;
 }
 
 .flex-centered {
@@ -63,6 +72,11 @@ div {
     justify-content: flex-end;
     align-items: flex-start;
     height: 96%;
+}
+
+.section {
+    min-height: 50dvh;
+    padding: 8dvh 3dvw;
 }
 
 .container {

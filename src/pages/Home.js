@@ -3,8 +3,8 @@ import "../styles/home.css"
 
 const Home = () => {
     return (
-        <section id="home">
-            <div id="hero" className='full-height flex-centered flex-column'>
+        <main id="home">
+            <section id="hero" className='full-height flex-centered flex-column'>
                 <div className='hero-content'>
                     <div className='reverse-flex container'>
                         <div className='calender-container'>
@@ -35,22 +35,44 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
+                        <span className='subtitle'>Vote for</span>
                         <h1>Madni Ansari</h1>
-                        <h2>
+                        <h3>
                             General Seceratary Candidate,
                             <br />
                             Rizvi College of Engineering
-                        </h2>
-                        <a className='button button-cta' href="https://wa.me/+918104764605?text=I'm%20impressed%20by%20your%20qualifications%20and%20vision%20for%20our%20college.%20You%20have%20my%20vote%20for%20General%20Secretary,%20count%20me%20in.%20Best%20of%20luck!">Vote for Me</a>
+                        </h3>
+                        <a className='button button-cta' target='_blank' href="https://wa.me/+918104764605?text=I'm%20impressed%20by%20your%20qualifications%20and%20vision%20for%20our%20college.%20You%20have%20my%20vote%20for%20General%20Secretary,%20count%20me%20in.%20Best%20of%20luck!">
+                            Show Your Support
+                        </a>
                     </div>
                 </div>
                 <div className='hero-overlay'></div>
 
-            </div>
-            <div className='full-height flex-centered flex-column'>
+            </section>
+            <section id="about-me" className='section'>
+                <h2>Why Me?</h2>
+                <p>
+                    👋 Hey there! I'm Madni Ansari, an engineering student with a BIG vision for positive change in our college! 🌟 I believe in leadership and teamwork to make college unforgettable. Actively involved in clubs, fostering community. With a creative mindset and dedication, I'm set to elevate our college! 🚀
+                </p>
 
-            </div>
-        </section>
+                <p>
+                    Why vote for me? With your support, we'll ignite innovation, ensure inclusivity, and drive progress together! As General Secretary, I'll be your megaphone! 📣 Let's create an amazing, supportive college for everyone! Together, we'll make college life unforgettable! 🎉
+                </p>
+
+                <p>
+                    Vote Madni Ansari for a brighter college future! Let's rock this!
+                    <br />
+                    <span className='hash-tag'>
+                        #MadniForGenSec &nbsp;
+                    </span>
+                    <span className='hash-tag'>
+                        #TogetherWeThrive
+                    </span>
+                </p>
+
+            </section>
+        </main>
     )
 }
 
