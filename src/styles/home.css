@@ -119,3 +119,10 @@
 .hash-tag{
     color: var(--color-4);
 }
+
+
+.video-player{
+    margin: 1rem 0;
+    width: 100%;
+    border-radius: 10px;
+}

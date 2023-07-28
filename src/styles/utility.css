@@ -51,6 +51,9 @@ div {
     font-size: var(--small-font-size);
 }
 
+p b{
+    font-weight: 600;
+}
 
 .full-height {
     height: 100dvh;

@@ -52,16 +52,19 @@ const Home = () => {
             </section>
             <section id="about-me" className='section'>
                 <h2>Why Me?</h2>
+                <video className='video-player' controls>
+                    <source src='./videos/video.mp4' />
+                </video>
                 <p>
-                    👋 Hey there! I'm Madni Ansari, an engineering student with a BIG vision for positive change in our college! 🌟 I believe in leadership and teamwork to make college unforgettable. Actively involved in clubs, fostering community. With a creative mindset and dedication, I'm set to elevate our college! 🚀
+                    👋 Hey there! I'm <b>Madni Ansari</b>, an engineering student with a BIG vision for positive change in our college! 🌟 I believe in leadership and teamwork to make college unforgettable. Actively involved in clubs, fostering community. With a creative mindset and dedication, I'm set to elevate our college! 🚀
                 </p>
 
                 <p>
-                    Why vote for me? With your support, we'll ignite innovation, ensure inclusivity, and drive progress together! As General Secretary, I'll be your megaphone! 📣 Let's create an amazing, supportive college for everyone! Together, we'll make college life unforgettable! 🎉
+                    <u><i>Why vote for me?</i></u> With your support, we'll ignite innovation, ensure inclusivity, and drive progress together! As General Secretary, I'll be your megaphone! 📣 Let's create an amazing, supportive college for everyone! Together, we'll make college life unforgettable! 🎉
                 </p>
 
                 <p>
-                    Vote Madni Ansari for a brighter college future! Let's rock this!
+                    <b>Vote Madni Ansari</b> for a brighter college future!
                     <br />
                     <span className='hash-tag'>
                         #MadniForGenSec &nbsp;
