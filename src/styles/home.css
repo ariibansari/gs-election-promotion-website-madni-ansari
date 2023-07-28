@@ -26,10 +26,15 @@
 
 .button-cta {
     color: var(--color-2);
-    width: 100%;
+    width: 100% !important;
     height: 3rem;
+    padding: 0;
     font-weight: 600;
     background-color: var(--color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .button-cta:hover {
@@ -49,6 +54,7 @@
 
 .calender-container {
     width: 100%;
+    overflow: hidden;
 }
 
 .calender {
@@ -56,6 +62,7 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    margin-bottom: 1rem;
 }
 
 .calender::before {
@@ -67,7 +74,6 @@
     right: 100%;
     top: 0px;
     opacity: 0.3;
-    padding: 5px;
 }
 
 .calender::after {
@@ -79,7 +85,6 @@
     left: 100%;
     top: 0px;
     opacity: 0.3;
-    padding: 5px;
 }
 
 
