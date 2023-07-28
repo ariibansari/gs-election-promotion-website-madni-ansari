@@ -55,6 +55,13 @@ const Home = () => {
                 <video className='video-player' controls>
                     <source src='./videos/video.mp4' />
                 </video>
+                <div className='profile'>
+                    <img src="./images/temp/profile.jpg" className='profile-picture' />
+                    <p>
+                        Madni Ansari
+                        <span>madni@gmail.cmo | 21yr Old</span>
+                    </p>
+                </div>
                 <p>
                     👋 Hey there! I'm <b>Madni Ansari</b>, an engineering student with a BIG vision for positive change in our college! 🌟 I believe in leadership and teamwork to make college unforgettable. Actively involved in clubs, fostering community. With a creative mindset and dedication, I'm set to elevate our college! 🚀
                 </p>
