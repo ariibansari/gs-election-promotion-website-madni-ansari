@@ -56,7 +56,7 @@ const Home = () => {
                     <source src='./videos/video.mp4' />
                 </video>
                 <div className='profile'>
-                    <img src="./images/temp/profile.jpg" className='profile-picture' />
+                    <img src="./images/temp/profile.jpg" className='profile-picture' alt="profile" />
                     <p>
                         Madni Ansari
                         <span>madni@gmail.cmo | 21yr Old</span>
