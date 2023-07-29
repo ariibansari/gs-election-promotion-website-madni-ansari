@@ -110,3 +110,25 @@ p b {
     color: var(--color-2);
     font-size: var(--tiny-font-size);
 }
+
+.icon-button {
+    border: none;
+    background-color: transparent;
+    font-size: var(--small-font-size);
+    padding: .5rem;
+    border-radius: 100%;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #222;
+}
+
+.icon-button:hover,
+.icon-button:focus,
+.icon-button:active {
+    background-color: #22222241;
+
+}

@@ -174,7 +174,7 @@ const Home = () => {
             </section>
 
 
-            <ImageViewer src={selectedImgSrc} show={show} imageViewerRef={imageViewerRef} />
+            <ImageViewer src={selectedImgSrc} show={show} setShow={setShow} imageViewerRef={imageViewerRef} />
 
         </main>
     )
