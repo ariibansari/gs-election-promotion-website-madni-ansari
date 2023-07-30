@@ -376,6 +376,7 @@
     transform: translateY(-50%);
     width: 25vw;
     z-index: 0;
+    opacity: 0.5;
 }
 
 .marquee-container {
