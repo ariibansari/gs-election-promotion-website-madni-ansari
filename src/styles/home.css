@@ -285,11 +285,11 @@
 .helper-container img {
     position: absolute;
     z-index: 1;
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     border: none;
     box-shadow: none;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%);
     z-index: 0;
@@ -355,7 +355,7 @@
 
 #final-message {
     position: relative;
-    height: 10rem;
+    height: 15rem;
 }
 
 
@@ -371,7 +371,7 @@
 
 #final-message .pattern {
     position: absolute;
-    top: 50%;
+    top: 65%;
     right: 0;
     transform: translateY(-50%);
     width: 25vw;
