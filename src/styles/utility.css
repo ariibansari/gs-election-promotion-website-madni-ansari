@@ -15,7 +15,7 @@
 
     /* Font Sizes */
     --tiny-font-size: 12px;
-    --small-font-size: 16px;
+    --small-font-size: 15px;
     --medium-font-size: 21px;
     --large-font-size: 30px;
     --extra-large-font-size: 36px;
@@ -24,6 +24,7 @@
 body {
     font-family: 'Poppins', sans-serif !important;
     background-color: var(--color-1);
+    scroll-behavior: smooth;
 }
 
 
@@ -56,7 +57,7 @@ p b {
 }
 
 .full-height {
-    height: 100dvh;
+    height: 92dvh;
 }
 
 .flex-centered {
@@ -114,7 +115,7 @@ p b {
 .icon-button {
     border: none;
     background-color: transparent;
-    font-size: var(--small-font-size);
+    font-size: calc(var(--small-font-size) + 2px);
     padding: .5rem;
     border-radius: 100%;
     width: 2.2rem;
@@ -123,7 +124,7 @@ p b {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: #222;
+    color: #575757;
 }
 
 .icon-button:hover,
