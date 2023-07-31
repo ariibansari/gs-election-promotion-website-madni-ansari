@@ -4,13 +4,13 @@
     --color-1: #fafcfa;
     --color-1-accent: #dfdfdf;
 
-    --color-2: rgb(29, 29, 29);
+    --color-2: #1d1d1d;
     --color-2-accent: rgb(48, 48, 48);
 
     --color-3: #002831;
     --color-3-accent: #0083a0;
 
-    --color-4: rgb(218, 16, 133);
+    --color-4: #da1085;
     --color-4-accent: red;
 
     /* Font Sizes */
@@ -25,9 +25,13 @@ body {
     font-family: 'Poppins', sans-serif !important;
     background-color: var(--color-1);
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
-
+.subtitle {
+    font-size: var(--tiny-font-size);
+    color: rgb(85, 85, 85);
+}
 
 h1 {
     font-size: var(--extra-large-font-size);
@@ -94,11 +98,11 @@ p b {
     margin-bottom: 6px;
 }
 
-.mt-0{
+.mt-0 {
     margin-top: 0;
 }
 
-.pt-1{
+.pt-1 {
     padding-top: 5px !important;
 }
 

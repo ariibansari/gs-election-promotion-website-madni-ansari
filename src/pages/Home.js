@@ -15,10 +15,12 @@ const Home = () => {
     const handleShow = () => setShow(true);
 
     const [selectedImgSrc, setSelectedImgSrc] = useState("")
+    const [selectedImgTitle, setSelectedImgTitle] = useState("")
 
     const handleImageClick = (e) => {
         helperRef.current.style.display = "none"
         setSelectedImgSrc(e.target.getAttribute("src"))
+        setSelectedImgTitle(e.target.getAttribute("title"))
         handleShow()
     }
 
@@ -231,6 +233,9 @@ const Home = () => {
                         #MadniForGenSec &nbsp;
                     </span>
                     <span data-aos="fade-up" className='highlighted'>
+                        #VoteForMadniAnsari &nbsp;
+                    </span>
+                    <span data-aos="fade-up" className='highlighted'>
                         #TogetherWeThrive
                     </span>
                 </div>
@@ -243,29 +248,30 @@ const Home = () => {
 
             <section id="achievements" className='section pt-1'>
                 <h2 data-aos="fade-in">My Achievements</h2>
+
                 <div data-aos="slide-up" className='achievement-container'>
                     <div className='achievement'>
-                        <h4>Internship at Delta Thermoformers</h4>
+                        <h4>My Internships</h4>
                         <div ref={helperRef} className='helper-container'>
-                            <div src="./images/temp/letter-of-intership.jpeg" onClick={e => handleImageClick(e)} className='overlay' />
+                            <div src="./images/docs/letter-of-intership.jpeg" onClick={e => handleImageClick(e)} className='overlay' />
                             <img loading="lazy" src="./images/click.gif" alt="click gif" />
                         </div>
-                        <img loading="lazy" src="./images/temp/letter-of-intership.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
-                        <img loading="lazy" src="./images/temp/certificate-internship.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
+
+                        <img loading="lazy" title='Delta Thermoformers' src="./images/docs/letter-of-intership.jpeg" alt="letter-of-intership" onClick={e => handleImageClick(e)} />
+                        <img loading="lazy" title='Central Railway Loco Workshop' src="./images/docs/certificate-railway-internship.webp" alt="certificate-railway-internship" onClick={e => handleImageClick(e)} />
                     </div>
                 </div>
+
                 <div data-aos="slide-up" className='achievement-container'>
                     <div className='achievement'>
-                        <h4>Tech Fest IIT Bombay</h4>
-                        <img loading="lazy" src="./images/temp/certificate-iit-bombay.jpeg" alt="certificate of achievement" onClick={e => handleImageClick(e)} />
+                        <h4>Campus Ambassador Certificates</h4>
+                        <img loading="lazy" title='IIT Kharakpur - Tshirt Giveaway' src="./images/docs/iit-kharakpur-tshirt-distribution.webp" alt="iit-kharakpur-tshirt-distribution" onClick={e => handleImageClick(e)} />
+                        <img loading="lazy" title='IIT Bombay' src="./images/docs/iit-bombay.webp" alt="iit-bombay" onClick={e => handleImageClick(e)} />
+                        <img loading="lazy" title='IIT Kharakpur' src="./images/temp/iit-kharakpur.jpeg" alt="iit-kharakpur" onClick={e => handleImageClick(e)} />
                     </div>
                 </div>
-                <div className='achievement-container'>
-                    <div className='achievement'>
-                        <h4>Certificate of Achievement</h4>
-                        <img loading="lazy" src="./images/temp/certificate-achievement.jpeg" alt="certificate of achievement" onClick={e => handleImageClick(e)} />
-                    </div>
-                </div>
+
+
                 {!showAllAccomplishments
                     &&
                     <div className='show-more'>
@@ -278,18 +284,19 @@ const Home = () => {
                         <div data-aos="slide-up" className='achievement-container'>
                             <div className='achievement'>
                                 <h4>Certificate of Commitment</h4>
-                                <img loading="lazy" src="./images/temp/certificate-commitment.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
+                                <img loading="lazy" title='Certificate of Commitment' src="./images/docs/certificate-of-commitment.webp" alt="certificate-of-commitment" onClick={e => handleImageClick(e)} />
                             </div>
                         </div>
                         <div data-aos="slide-up" className='achievement-container last-achievement'>
                             <div className='achievement'>
-                                <h4>Certificate of Appreciation</h4>
-                                <img loading="lazy" src="./images/temp/certificate-appreciation.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
+                                <h4>DIPLOMA's Fest</h4>
+                                <p className='subtitle'>As core committee member, I contributed to the success of my diploma's fest with creative planning and teamwork.</p>
+                                <img loading="lazy" title='Torque 2019' src="./images/docs/certificate-torque.webp" alt="certificate-torque" onClick={e => handleImageClick(e)} />
                             </div>
                         </div>
                     </>
                 }
-                <ImageViewer src={selectedImgSrc} show={show} setShow={setShow} imageViewerRef={imageViewerRef} />
+                <ImageViewer src={selectedImgSrc} title={selectedImgTitle} show={show} setShow={setShow} imageViewerRef={imageViewerRef} />
             </section>
 
             <section id="testimonials" className='section' style={{ marginTop: "3rem" }}>
@@ -300,7 +307,7 @@ const Home = () => {
                 <div className='testimonial-container'>
                     <div className='testimonial'>
                         <div className='testimonial-header'>
-                            <img data-aos="fade-in" loading="lazy" src="./images/technical-secretary.jpeg" className='profile-picture' alt="profile" />
+                            <img data-aos="fade-in" loading="lazy" src="./images/afaan-pawaskar.jpeg" className='profile-picture' alt="afaan-pawaskar profile" />
                             <div data-aos="fade-in">
                                 <h4>Afaan Pawaskar</h4>
                                 <span>Former technical secretary</span>
@@ -316,7 +323,7 @@ const Home = () => {
 
                     <div className='testimonial'>
                         <div className='testimonial-header'>
-                            <img data-aos="fade-in" loading="lazy" src="./images/cultural-secretary.jpeg" className='profile-picture' alt="profile" />
+                            <img data-aos="fade-in" loading="lazy" src="./images/arya-pillai.jpeg" className='profile-picture' alt="arya-pillai profile" />
                             <div data-aos="fade-in">
                                 <h4>Arya Pillai</h4>
                                 <span>Former cultural secretary</span>
@@ -332,15 +339,15 @@ const Home = () => {
 
                     <div className='testimonial'>
                         <div className='testimonial-header'>
-                            <img data-aos="fade-in" loading="lazy" src="./images/temp/profile.jpg" className='profile-picture' alt="profile" />
+                            <img data-aos="fade-in" loading="lazy" src="./images/saud-shaikh.jpeg" className='profile-picture' alt="saud-shaikh profile" />
                             <div data-aos="fade-in">
-                                <h4>Jane Smith</h4>
-                                <span>Faculty Member</span>
+                                <h4>Saud Shaikh</h4>
+                                <span>Ex Student Batch 2023</span>
                             </div>
                         </div>
                         <div data-aos="fade-up" className='testimonial-body'>
                             <span>" &nbsp;</span>
-                            Madni's enthusiasm and innovative ideas are truly inspiring. As part of the same club, I've seen them work tirelessly to enhance the student experience. Their ability to think outside the box and bring fresh perspectives to the table is unmatched. Madni's leadership qualities are exactly what our college needs. Count me in as a proud supporter!
+                            Madni Ansari was the driving force behind last year's festival! Their enthusiasm and dedication were infectious, motivating all of us to actively participate in every event. From organizing activities to leading coordination efforts, they made the festival an unforgettable experience. A true leader and team player!
                         </div>
                     </div>
 
@@ -358,7 +365,7 @@ const Home = () => {
 
             <footer className="marquee-container">
                 <div data-aos="slide-up" className="marquee-content">
-                    #MadniForGenSec
+                    #VoteForMadniAnsari
                 </div>
                 <div className='links'>
 
@@ -366,7 +373,7 @@ const Home = () => {
                 <div className='socials'>
                     <a data-aos="fade-up" href="https://www.instagram.com/madni.ansarii/" target='_blank' rel="noreferrer">
                         <FiInstagram />
-                        Follow on Instagram
+                        Follow me on Instagram
                     </a>
                     <a data-aos="fade-up" href="mailto:ansarimadni11@gmail.com">
                         <AiOutlineMail />
@@ -378,11 +385,9 @@ const Home = () => {
                     </a>
                 </div>
                 <div className='copy'>
-                    <div data-aos="fade-up">
-                        © Copyright 2023 Madni Ansari
-                        <br />
-                        All Rights Reserved
-                    </div>
+                    Copyright © 2023, Madni Ansari
+                    <br />
+                    All Rights Reserved
                 </div>
             </footer>
 

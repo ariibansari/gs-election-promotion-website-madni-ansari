@@ -3,7 +3,7 @@ import "../styles/imageViewer.css"
 import { RiDownloadLine, RiCloseLine } from 'react-icons/ri'
 import { AiOutlineClose } from 'react-icons/ai'
 
-const ImageViewer = ({ src, show, setShow, imageViewerRef }) => {
+const ImageViewer = ({ src, title, show, setShow, imageViewerRef }) => {
 
     useEffect(() => {
         if (show) {
@@ -26,6 +26,7 @@ const ImageViewer = ({ src, show, setShow, imageViewerRef }) => {
                         <AiOutlineClose />
                     </button>
                 </div>
+                <h4>{title}</h4>
                 <div className='viewer-body'>
                     <img src={src} alt="certificate/letter" />
                 </div>
