@@ -436,7 +436,7 @@
 }
 
 .socials {
-    padding: 2rem 6vw;
+    padding: 3.5rem 6vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -444,7 +444,7 @@
     background-color: var(--color-2);
     border-bottom: 1px solid rgb(61, 61, 61);
     margin-top: 2rem;
-    gap: 16px;
+    gap: 20px;
 }
 
 .socials a {
@@ -453,7 +453,7 @@
     align-items: center;
     gap: 10px;
     color: var(--color-1);
-    font-size: var(--small-font-size);
+    font-size: 14px;
 }
 
 .socials a svg {

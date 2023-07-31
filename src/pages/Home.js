@@ -83,7 +83,7 @@ const Home = () => {
     useEffect(() => {
         const handleScroll = e => {
             if (scrollToTopRef.current) {
-                if (window.scrollY > 500) {
+                if (window.scrollY > 730) {
                     scrollToTopRef.current.style.bottom = "4vh"
                 } else {
                     scrollToTopRef.current.style.bottom = "-8vh"
@@ -160,7 +160,7 @@ const Home = () => {
                     <source src='./videos/promotion-video-compressed.mp4' />
                 </video>
                 <div className='profile'>
-                    <img src="./images/profile-2.jpg" className='profile-picture' alt="profile" />
+                    <img loading="lazy" src="./images/profile-2.jpg" className='profile-picture' alt="profile" />
                     <p>
                         Madni Ansari
                         <span>ansarimadni11@gmail.com | 21yr old</span>
@@ -217,7 +217,7 @@ const Home = () => {
                 </div>
 
                 <div className='pattern right'>
-                    <img src="./images/pattern.webp" alt="pattern" />
+                    <img  loading="lazy" src="./images/pattern.webp" alt="pattern" />
                 </div>
             </section>
 
@@ -229,22 +229,22 @@ const Home = () => {
                         <h4>Internship at Delta Thermoformers</h4>
                         <div ref={helperRef} className='helper-container'>
                             <div src="./images/temp/letter-of-intership.jpeg" onClick={e => handleImageClick(e)} className='overlay' />
-                            <img src="./images/click.gif" alt="click gif" />
+                            <img  loading="lazy" src="./images/click.gif" alt="click gif" />
                         </div>
-                        <img src="./images/temp/letter-of-intership.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
-                        <img src="./images/temp/certificate-internship.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
+                        <img  loading="lazy" src="./images/temp/letter-of-intership.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
+                        <img  loading="lazy" src="./images/temp/certificate-internship.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
                     </div>
                 </div>
                 <div className='achievement-container'>
                     <div className='achievement'>
                         <h4>Tech Fest IIT Bombay</h4>
-                        <img src="./images/temp/certificate-iit-bombay.jpeg" alt="certificate of achievement" onClick={e => handleImageClick(e)} />
+                        <img  loading="lazy" src="./images/temp/certificate-iit-bombay.jpeg" alt="certificate of achievement" onClick={e => handleImageClick(e)} />
                     </div>
                 </div>
                 <div className='achievement-container'>
                     <div className='achievement'>
                         <h4>Certificate of Achievement</h4>
-                        <img src="./images/temp/certificate-achievement.jpeg" alt="certificate of achievement" onClick={e => handleImageClick(e)} />
+                        <img  loading="lazy" src="./images/temp/certificate-achievement.jpeg" alt="certificate of achievement" onClick={e => handleImageClick(e)} />
                     </div>
                 </div>
                 {!showAllAccomplishments
@@ -259,13 +259,13 @@ const Home = () => {
                         <div className='achievement-container'>
                             <div className='achievement'>
                                 <h4>Certificate of Commitment</h4>
-                                <img src="./images/temp/certificate-commitment.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
+                                <img  loading="lazy" src="./images/temp/certificate-commitment.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
                             </div>
                         </div>
                         <div className='achievement-container last-achievement'>
                             <div className='achievement'>
                                 <h4>Certificate of Appreciation</h4>
-                                <img src="./images/temp/certificate-appreciation.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
+                                <img  loading="lazy" src="./images/temp/certificate-appreciation.jpeg" alt="certificate of commitment" onClick={e => handleImageClick(e)} />
                             </div>
                         </div>
                     </>
@@ -275,13 +275,13 @@ const Home = () => {
 
             <section id="testimonials" className='section' style={{ marginTop: "3rem" }}>
                 <div className='pattern left' style={{ marginBottom: "-3rem" }}>
-                    <img src="./images/pattern.webp" alt="pattern" />
+                    <img  loading="lazy" src="./images/pattern.webp" alt="pattern" />
                 </div>
                 <h2>Hear from others</h2>
                 <div className='testimonial-container'>
                     <div className='testimonial'>
                         <div className='testimonial-header'>
-                            <img src="./images/technical-secretary.jpeg" className='profile-picture' alt="profile" />
+                            <img  loading="lazy" src="./images/technical-secretary.jpeg" className='profile-picture' alt="profile" />
                             <div>
                                 <h4>Afaan Pawaskar</h4>
                                 <span>Former technical secretary</span>
@@ -297,7 +297,7 @@ const Home = () => {
 
                     <div className='testimonial'>
                         <div className='testimonial-header'>
-                            <img src="./images/cultural-secretary.jpeg" className='profile-picture' alt="profile" />
+                            <img  loading="lazy" src="./images/cultural-secretary.jpeg" className='profile-picture' alt="profile" />
                             <div>
                                 <h4>Arya Pillai</h4>
                                 <span>Former cultural secretary</span>
@@ -313,7 +313,7 @@ const Home = () => {
 
                     <div className='testimonial'>
                         <div className='testimonial-header'>
-                            <img src="./images/temp/profile.jpg" className='profile-picture' alt="profile" />
+                            <img  loading="lazy" src="./images/temp/profile.jpg" className='profile-picture' alt="profile" />
                             <div>
                                 <h4>Jane Smith</h4>
                                 <span>Faculty Member</span>
@@ -336,7 +336,7 @@ const Home = () => {
                 <h4>
                     Together, Let's Elevate Our College Experience! 🚀 Vote Madni Ansari for General Secretary and Unlock a Brighter Future! 🌟
                 </h4>
-                <img src="./images/pattern-v-1.webp" className='pattern' alt="" />
+                <img  loading="lazy" src="./images/pattern-v-1.webp" className='pattern' alt="" />
             </section>
 
             <footer className="marquee-container">

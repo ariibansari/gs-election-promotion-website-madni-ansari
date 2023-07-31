@@ -4,7 +4,7 @@
     left: 0;
     background-color: var(--color-1);
     width: 100%;
-    transition: all 150ms linear;
+    transition: all 150ms ease-in-out;
     z-index: 6;
     max-height: 80dvh;
     overflow-y: scroll;
