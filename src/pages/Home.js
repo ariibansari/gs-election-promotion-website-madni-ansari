@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import "../styles/home.css"
 import ImageViewer from '../components/ImageViewer';
-import { BsChevronDown, BsInstagram } from 'react-icons/bs'
+import { BsChevronDown, BsChevronUp, BsInstagram } from 'react-icons/bs'
 import { useNavigate } from 'react-router';
 import { FiInstagram } from 'react-icons/fi';
 import { AiOutlineMail } from 'react-icons/ai';
@@ -26,6 +26,7 @@ const Home = () => {
     const navigate = useNavigate()
 
     const helperRef = useRef(null)
+    const scrollToTopRef = useRef(null)
 
     const imageViewerRef = useRef(null)
     useClickOutside(imageViewerRef)
@@ -77,15 +78,35 @@ const Home = () => {
                 observer.unobserve(helperRef.current);
             }
         };
-    }, [helperRef]);
+    }, [helperRef])
 
+    useEffect(() => {
+        const handleScroll = e => {
+            if (scrollToTopRef.current) {
+                if (window.scrollY > 500) {
+                    scrollToTopRef.current.style.bottom = "4vh"
+                } else {
+                    scrollToTopRef.current.style.bottom = "-8vh"
+                }
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll)
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll)
+        }
+    }, [])
 
     return (
         <main id="home">
+            <div ref={scrollToTopRef} className='scroll-more-icon scroll-to-top' onClick={() => document.getElementById("hero").scrollIntoView({ behavior: "smooth" })}>
+                <BsChevronUp />
+            </div>
 
             <section id="hero" className='full-height flex-centered flex-column'>
                 <div className='hero-content'>
-                    <div className='reverse-flex container'>
+                    <div className='reverse-flex container' data-aos="fade-in">
                         <div className='calender-container'>
                             <div className='calender'>
                                 <div className='date'>
@@ -115,7 +136,7 @@ const Home = () => {
                             </div>
                         </div>
                         <span className='subtitle'>Vote for</span>
-                        <h1>Madni Ansari</h1>
+                        <h1 data-aos="zoom-out">Madni Ansari</h1>
                         <h3>
                             General Seceratary Candidate,
                             <br />
@@ -136,40 +157,72 @@ const Home = () => {
             <section id="about-me" className='section'>
                 <h2>Why Me?</h2>
                 <video className='video-player' controls>
-                    <source src='./videos/video.mp4' />
+                    <source src='./videos/promotion-video-compressed.mp4' />
                 </video>
                 <div className='profile'>
                     <img src="./images/profile-2.jpg" className='profile-picture' alt="profile" />
                     <p>
                         Madni Ansari
-                        <span>madni@gmail.com | 21yr Old</span>
+                        <span>ansarimadni11@gmail.com | 21yr old</span>
                     </p>
                 </div>
                 <p>
-                    👋 Hey there! I'm <b>Madni Ansari</b>, an engineering student with a BIG vision for positive change in our college! 🌟 I believe in leadership and teamwork to make college unforgettable. Actively involved in clubs, fostering community. With a creative mindset and dedication, I'm set to elevate our college! 🚀
+                    👋 Hey there! I'm Madni Ansari, an engineering student with a BIG vision for positive change in our college! 🌟 I believe in leadership and teamwork to make college unforgettable. Here are some reasons <u><i>why you should vote for me - </i></u>
                 </p>
 
-                <p>
-                    <u><i>Why vote for me?</i></u> With your support, we'll ignite innovation, ensure inclusivity, and drive progress together! As General Secretary, I'll be your megaphone! 📣 Let's create an amazing, supportive college for everyone! Together, we'll make college life unforgettable! 🎉
-                </p>
+                <div className='reason'>
+                    <div className='flex-centered justify-start align-end mb-1'>
+                        <b><span className='highlighted'>Proven Leadership</span></b>
+                    </div>
+                    As a <b>Campus Ambassador</b> for prestigious institutes like <b>IIT Kharagpur and IIT Bombay</b>, and a private ed-tech company, I have demonstrated exceptional leadership and communication skills.
+                </div>
 
-                <p>
-                    <b>Vote Madni Ansari</b> for a brighter college future!
+                <div className='reason'>
+                    <div className='flex-centered justify-start align-end mb-1 gap-1'>
+                        <b><span className='highlighted'>Event Management Expertise</span></b>
+                    </div>
+                    Held a vital position in the core committee during the diploma program's college fest, also with experience as a <b>head cordinater</b> for various events in last years fest, displaying my commitment to organizing successful events.
+                </div>
+
+                <div className='reason'>
+                    <div className='flex-centered justify-start align-end mb-1 gap-1'>
+                        <b><span className='highlighted'>Creative Vision</span></b>
+                    </div>
+                    Being the <b>head of decorations</b> and sole responsibility for designing the cultural fest brochure showcases my creativity and eye for detail.
+                </div>
+
+                <div className='reason'>
+                    <div className='flex-centered justify-start align-end mb-1 gap-1'>
+                        <b><span className='highlighted'>Creative Expertise</span></b>
+                    </div>
+                    <b>Solely responsible for designing and creating brochures</b> for the cultural fest, highlighting my creativity and attention to detail.
+                </div>
+
+                <div className='reason'>
+                    <div className='flex-centered justify-start align-end mb-1 gap-1'>
+                        <b><span className='highlighted'>Empowering Others</span></b>
+                    </div>
+                    <b>Securing a government internship</b> and <b>providing the same opportunity to my mechanical junior</b> highlights my commitment to empowering fellow students.
+                </div>
+
+                <div className='reason'>
+                    <b>Vote for me</b> to bring fresh ideas, efficient organization, and a passion for representing and empowering our college community! Together, let's create an exceptional college experience for all.
                     <br />
-                    <span className='hash-tag'>
+                    <span className='highlighted'>
                         #MadniForGenSec &nbsp;
-                    </span>
-                    <span className='hash-tag'>
+                        div </span>
+                    <span className='highlighted'>
                         #TogetherWeThrive
                     </span>
-                </p>
+                </div>
+
                 <div className='pattern right'>
                     <img src="./images/pattern.webp" alt="pattern" />
                 </div>
             </section>
 
 
-            <section id="achievements" className='section'>
+            <section id="achievements" className='section pt-1'>
                 <h2>My Achievements</h2>
                 <div className='achievement-container'>
                     <div className='achievement'>
@@ -228,15 +281,15 @@ const Home = () => {
                 <div className='testimonial-container'>
                     <div className='testimonial'>
                         <div className='testimonial-header'>
-                            <img src="./images/temp/profile-3.jpeg" className='profile-picture' alt="profile" />
+                            <img src="./images/technical-secretary.jpeg" className='profile-picture' alt="profile" />
                             <div>
-                                <h4>Sarah Johnson</h4>
-                                <span>College Club President</span>
+                                <h4>Afaan Pawaskar</h4>
+                                <span>Former technical secretary</span>
                             </div>
                         </div>
                         <div className='testimonial-body'>
                             <span>" &nbsp;</span>
-                            Madni is an exceptional student leader with a genuine passion for making a difference. I've seen them initiate and lead various community-driven initiatives that have positively impacted our college.
+                            Having Madni Ansari as an active participant in our last year's technical fest was a game-changer! Their dedication and expertise were evident in every task they undertook. As a former Technical Secretary, I can confidently say that their contributions significantly elevated the success and impact of the event. Truly exceptional!
                         </div>
                     </div>
 
@@ -244,15 +297,15 @@ const Home = () => {
 
                     <div className='testimonial'>
                         <div className='testimonial-header'>
-                            <img src="./images/temp/profile-2.jpg" className='profile-picture' alt="profile" />
+                            <img src="./images/cultural-secretary.jpeg" className='profile-picture' alt="profile" />
                             <div>
-                                <h4>Sam Oltmen</h4>
-                                <span>CEO, OpenAI</span>
+                                <h4>Arya Pillai</h4>
+                                <span>Former cultural secretary</span>
                             </div>
                         </div>
                         <div className='testimonial-body'>
                             <span>" &nbsp;</span>
-                            I had the pleasure of working with Madni during a challenging project at our college. Their dedication and leadership skills were truly commendable. Madni's ability to bring the team together and navigate complex situations made the project a huge success.
+                            Madni Ansari was an invaluable asset to our cultural fest last year. As the former Cultural Secretary, I can confidently say that Madni Ansari brought boundless energy, creativity, and dedication to every aspect of the event. Their active participation and leadership as a volunteer and head coordinator left a lasting impact on the festival's success.
                         </div>
                     </div>
 
@@ -278,31 +331,41 @@ const Home = () => {
 
 
             <section id="final-message" className='container'>
+
+
                 <h4>
                     Together, Let's Elevate Our College Experience! 🚀 Vote Madni Ansari for General Secretary and Unlock a Brighter Future! 🌟
                 </h4>
                 <img src="./images/pattern-v-1.webp" className='pattern' alt="" />
             </section>
 
-            <div class="marquee-container">
-                <div class="marquee-content">
+            <footer className="marquee-container">
+                <div className="marquee-content">
                     #MadniForGenSec
+                </div>
+                <div className='links'>
+
                 </div>
                 <div className='socials'>
                     <a href="https://www.instagram.com/madni.ansarii/" target='_blank' rel="noreferrer">
                         <FiInstagram />
+                        Follow on Instagram
                     </a>
                     <a href="mailto:ansarimadni11@gmail.com">
                         <AiOutlineMail />
+                        Leave a Mail
                     </a>
                     <a href="tel:+918104764605">
                         <BsTelephone />
+                        Get in Touch
                     </a>
                 </div>
                 <div className='copy'>
-                    Copyright © 2023 All Rights Reserved
+                    © Copyright 2023 Madni Ansari
+                    <br />
+                    All Rights Reserved
                 </div>
-            </div>
+            </footer>
 
         </main >
     )

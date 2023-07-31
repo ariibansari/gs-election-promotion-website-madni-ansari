@@ -57,13 +57,25 @@ p b {
 }
 
 .full-height {
-    height: 92dvh;
+    height: 92vh;
 }
 
 .flex-centered {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
 }
 
 .flex-column {
@@ -76,6 +88,26 @@ p b {
     justify-content: flex-end;
     align-items: flex-start;
     height: 96%;
+}
+
+.mb-1 {
+    margin-bottom: 6px;
+}
+
+.mt-0{
+    margin-top: 0;
+}
+
+.pt-1{
+    padding-top: 5px !important;
+}
+
+.mt-1 {
+    margin-top: 6px;
+}
+
+.gap-1 {
+    gap: 7px;
 }
 
 .section {
@@ -132,4 +164,8 @@ p b {
 .icon-button:active {
     background-color: #22222241;
 
+}
+
+.my-icon {
+    width: var(--extra-large-font-size);
 }

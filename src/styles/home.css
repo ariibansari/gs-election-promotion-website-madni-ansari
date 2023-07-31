@@ -1,3 +1,28 @@
+#home {
+    position: relative;
+}
+
+#home .scroll-to-top {
+    position: fixed;
+    top: unset;
+    left: unset;
+    bottom: -8vh;
+    right: 2vw;
+    display: flex;
+    transition: all 250ms linear;
+
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(2, 3, 17, 0.3) !important;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+#home .scroll-to-top svg {
+    animation: none;
+
+    transform: translateY(0);
+}
+
 #hero {
     background-image: url("../../public/images/profile-3.webp");
     background-position: center;
@@ -164,7 +189,7 @@
 }
 
 
-.hash-tag {
+.highlighted {
     color: var(--color-4);
 }
 
@@ -227,7 +252,7 @@
 
 
 .achievement {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid rgb(233, 233, 233);
     transition: all 100ms linear;
@@ -244,6 +269,7 @@
     font-weight: 400;
     padding-left: 1.6rem;
     position: relative;
+    margin-top: 0;
 }
 
 .achievement h4::before {
@@ -387,12 +413,13 @@
     color: #fff;
     padding: 2rem 0;
     margin: 5dvh 0 0 0;
-    text-align: center;
+    text-align: left;
     padding-bottom: 0;
 }
 
 
 .marquee-content {
+    padding: 0 6vw;
     display: inline-block;
     font-size: var(--small-font-size);
     /* animation: marqueeAnimation 10s linear infinite; */
@@ -409,20 +436,28 @@
 }
 
 .socials {
-    padding: 2rem 0;
+    padding: 2rem 6vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background-color: var(--color-2);
     border-bottom: 1px solid rgb(61, 61, 61);
     margin-top: 2rem;
-    gap: 3rem;
+    gap: 16px;
 }
 
 .socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     color: var(--color-1);
-    text-decoration: none;
     font-size: var(--small-font-size);
+}
+
+.socials a svg {
+    font-size: var(--medium-font-size);
 }
 
 .copy {
@@ -430,5 +465,26 @@
     background-color: var(--color-2);
     padding: 1.5rem 0;
     font-size: var(--tiny-font-size);
+    padding: 1.5rem 6vw;
 
+}
+
+.my-icon.planner {
+    width: 1.4rem;
+}
+
+.my-icon.vision {
+    width: 1.6rem;
+}
+
+.my-icon.empower {
+    width: 1.7rem;
+}
+
+.reason {
+    margin-top: 2rem;
+}
+
+.reason b .highlighted {
+    font-size: 17px;
 }
