@@ -141,9 +141,11 @@ const Home = () => {
                         <span className='subtitle' data-aos="slide-up">Vote for</span>
                         <h1 data-aos="slide-up">Madni Ansari</h1>
                         <h3 data-aos="slide-up">
-                            General Seceratary Candidate,
+                            General Seceratary Candidate -
                             <br />
-                            Rizvi College of Engineering
+                            Rizvi College of Engineering,
+                            <br />
+                            Final year mechanical engineering
                         </h3>
                         <a
                             className='button button-cta'
