@@ -1,16 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.c4b750a6.css",
-    "main.js": "/static/js/main.167541e0.js",
+    "main.js": "/static/js/main.b872415a.js",
     "static/js/787.95d8a68e.chunk.js": "/static/js/787.95d8a68e.chunk.js",
+    "static/media/certificate-torque.webp": "/static/media/certificate-torque.2b1b65eb3ff1286e4b48.webp",
+    "static/media/certificate-railway-internship.webp": "/static/media/certificate-railway-internship.baa54abdb1ab38cdb1c1.webp",
+    "static/media/letter-of-intership.jpeg": "/static/media/letter-of-intership.6ee78e40cc3a42fc7fe4.jpeg",
     "static/media/profile-3.webp": "/static/media/profile-3.3cec00b75e53e64f4827.webp",
+    "static/media/iit-kharagpur-tshirt-distribution.webp": "/static/media/iit-kharagpur-tshirt-distribution.09a898a819c9abe142ea.webp",
+    "static/media/iit-kharagpur.webp": "/static/media/iit-kharagpur.d5b2fa4cb93f4abc35ff.webp",
+    "static/media/iit-bombay-techfest.webp": "/static/media/iit-bombay-techfest.07c57724cf1465db96d5.webp",
+    "static/media/iit-bombay.webp": "/static/media/iit-bombay.8f0e093fd99ff8d3f043.webp",
+    "static/media/certificate-of-commitment.webp": "/static/media/certificate-of-commitment.c797e0ac398df99b1aef.webp",
     "index.html": "/index.html",
     "main.c4b750a6.css.map": "/static/css/main.c4b750a6.css.map",
-    "main.167541e0.js.map": "/static/js/main.167541e0.js.map",
+    "main.b872415a.js.map": "/static/js/main.b872415a.js.map",
     "787.95d8a68e.chunk.js.map": "/static/js/787.95d8a68e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c4b750a6.css",
-    "static/js/main.167541e0.js"
+    "static/js/main.b872415a.js"
   ]
 }
