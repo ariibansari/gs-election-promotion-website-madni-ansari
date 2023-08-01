@@ -6,6 +6,15 @@ import { useNavigate } from 'react-router';
 import { FiInstagram } from 'react-icons/fi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsTelephone } from 'react-icons/bs';
+import letterOfInternship from "../assets/images/docs/letter-of-intership.jpeg"
+import railwayInternshipCertificate from "../assets/images/docs/certificate-railway-internship.webp"
+import iitBombayCertificate from "../assets/images/docs/iit-bombay.webp"
+import iitBombayCeremony from "../assets/images/docs/iit-bombay-techfest.webp"
+import iitKharagpurCertificate from "../assets/images/docs/iit-kharagpur.webp"
+import iitKharagpurCeremony from "../assets/images/docs/iit-kharagpur-tshirt-distribution.webp"
+import commitmentCertificate from "../assets/images/docs/certificate-of-commitment.webp"
+import torqueCertificate from "../assets/images/docs/certificate-torque.webp"
+
 
 const Home = () => {
 
@@ -17,7 +26,9 @@ const Home = () => {
     const [selectedImgTitle, setSelectedImgTitle] = useState("")
 
     const handleImageClick = (e) => {
-        helperRef.current.style.display = "none"
+        if (helperRef.current) {
+            helperRef.current.style.display = "none"
+        }
         setSelectedImgSrc(e.target.getAttribute("src"))
         setSelectedImgTitle(e.target.getAttribute("title"))
         handleShow()
@@ -150,7 +161,7 @@ const Home = () => {
                             className='button button-cta'
                             target='_blank'
                             rel="noreferrer"
-                           
+
                             href="https://wa.me/+918104764605?text=I'm%20impressed%20by%20your%20qualifications%20and%20vision%20for%20our%20college.%20You%20have%20my%20vote%20for%20General%20Secretary,%20count%20me%20in.%20Best%20of%20luck!"
                         >
                             Show Your Support
@@ -230,13 +241,13 @@ const Home = () => {
                         <b>Vote for me</b> to bring fresh ideas, efficient organization, and a passion for representing and empowering our college community! Together, let's create an exceptional college experience for all.
                     </div>
                     <br />
-                    <span  className='highlighted'>
+                    <span className='highlighted'>
                         #MadniForGenSec &nbsp;
                     </span>
-                    <span  className='highlighted'>
+                    <span className='highlighted'>
                         #VoteForMadniAnsari &nbsp;
                     </span>
-                    <span  className='highlighted'>
+                    <span className='highlighted'>
                         #TogetherWeThrive
                     </span>
                 </div>
@@ -258,19 +269,19 @@ const Home = () => {
                             <img src="./images/click.gif" alt="click gif" />
                         </div>
 
-                        <img title='Delta Thermoformers' src="./images/docs/letter-of-intership.jpeg" alt="letter-of-intership" onClick={e => handleImageClick(e)} />
-                        <img title='Central Railway Loco Workshop' src="./images/docs/certificate-railway-internship.webp" alt="certificate-railway-internship" onClick={e => handleImageClick(e)} />
+                        <img title='Delta Thermoformers' src={letterOfInternship} alt="letter-of-intership" onClick={e => handleImageClick(e)} />
+                        <img title='Central Railway Loco Workshop' src={railwayInternshipCertificate} alt="certificate-railway-internship" onClick={e => handleImageClick(e)} />
                     </div>
                 </div>
 
                 <div className='achievement-container'>
                     <div className='achievement'>
                         <h4>Campus Ambassador Certificates</h4>
-                        <img title='IIT Kharagpur' src="./images/docs/iit-kharagpur.webp" alt="iit-kharagpur" onClick={e => handleImageClick(e)} />
-                        <img title='IIT Kharagpur - Tshirt' src="./images/docs/iit-kharagpur-tshirt-distribution.webp" alt="iit-kharagpur-tshirt-distribution" onClick={e => handleImageClick(e)} />
-                        <img title='IIT Bombay' src="./images/docs/iit-bombay.webp" alt="iit-bombay" onClick={e => handleImageClick(e)} />
+                        <img title='IIT Kharagpur' src={iitKharagpurCertificate} alt="iit-kharagpur" onClick={e => handleImageClick(e)} />
+                        <img title='IIT Kharagpur - Tshirt' src={iitKharagpurCeremony} alt="iit-kharagpur-tshirt-distribution" onClick={e => handleImageClick(e)} />
+                        <img title='IIT Bombay' src={iitBombayCertificate} alt="iit-bombay" onClick={e => handleImageClick(e)} />
                         <p className='subtitle mt-2'>Organized a workshop on robotics in our college in association with Techfest - IIT BOMBAY</p>
-                        <img title='Techfest - IIT Bombay' src="./images/docs/iit-bombay-techfest.webp" alt="iit-kharagpur" onClick={e => handleImageClick(e)} />
+                        <img title='Techfest - IIT Bombay' src={iitBombayCeremony} alt="iit-kharagpur" onClick={e => handleImageClick(e)} />
                     </div>
                 </div>
 
@@ -287,14 +298,14 @@ const Home = () => {
                         <div className='achievement-container'>
                             <div className='achievement'>
                                 <h4>Certificate of Commitment</h4>
-                                <img title='Certificate of Commitment' src="./images/docs/certificate-of-commitment.webp" alt="certificate-of-commitment" onClick={e => handleImageClick(e)} />
+                                <img title='Certificate of Commitment' src={commitmentCertificate} alt="certificate-of-commitment" onClick={e => handleImageClick(e)} />
                             </div>
                         </div>
                         <div className='achievement-container last-achievement'>
                             <div className='achievement'>
                                 <h4>DIPLOMA's Fest</h4>
                                 <p className='subtitle'>As core committee member, I contributed to the success of my diploma's fest with creative planning and teamwork.</p>
-                                <img title='Torque 2019' src="./images/docs/certificate-torque.webp" alt="certificate-torque" onClick={e => handleImageClick(e)} />
+                                <img title='Torque 2019' src={torqueCertificate} alt="certificate-torque" onClick={e => handleImageClick(e)} />
                             </div>
                         </div>
                     </>
@@ -316,7 +327,7 @@ const Home = () => {
                                 <span>Former technical secretary</span>
                             </div>
                         </div>
-                        <div  className='testimonial-body'>
+                        <div className='testimonial-body'>
                             <span>" &nbsp;</span>
                             Having Madni Ansari as an active participant in our last year's technical fest was a game-changer! Their dedication and expertise were evident in every task they undertook. As a former Technical Secretary, I can confidently say that their contributions significantly elevated the success and impact of the event. Truly exceptional!
                         </div>
@@ -332,7 +343,7 @@ const Home = () => {
                                 <span>Former cultural secretary</span>
                             </div>
                         </div>
-                        <div  className='testimonial-body'>
+                        <div className='testimonial-body'>
                             <span>" &nbsp;</span>
                             Madni Ansari was an invaluable asset to our cultural fest last year. As the former Cultural Secretary, I can confidently say that Madni Ansari brought boundless energy, creativity, and dedication to every aspect of the event. Their active participation and leadership as a volunteer and head coordinator left a lasting impact on the festival's success.
                         </div>
@@ -348,7 +359,7 @@ const Home = () => {
                                 <span>Ex Student Batch 2023</span>
                             </div>
                         </div>
-                        <div  className='testimonial-body'>
+                        <div className='testimonial-body'>
                             <span>" &nbsp;</span>
                             Madni Ansari was the driving force behind last year's festival! Their enthusiasm and dedication were infectious, motivating all of us to actively participate in every event. From organizing activities to leading coordination efforts, they made the festival an unforgettable experience. A true leader and team player!
                         </div>
@@ -374,15 +385,15 @@ const Home = () => {
 
                 </div>
                 <div className='socials'>
-                    <a  href="https://www.instagram.com/madni.ansarii/" target='_blank' rel="noreferrer">
+                    <a href="https://www.instagram.com/madni.ansarii/" target='_blank' rel="noreferrer">
                         <FiInstagram />
                         Follow me on Instagram
                     </a>
-                    <a  href="mailto:ansarimadni11@gmail.com">
+                    <a href="mailto:ansarimadni11@gmail.com">
                         <AiOutlineMail />
                         Leave a Mail
                     </a>
-                    <a  href="tel:+918104764605">
+                    <a href="tel:+918104764605">
                         <BsTelephone />
                         Get in Touch
                     </a>
