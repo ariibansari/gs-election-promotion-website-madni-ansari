@@ -169,7 +169,7 @@ const Home = () => {
                     <source src='./videos/promotion-video-compressed.mp4' />
                 </video>
                 <div className='profile'>
-                    <img data-aos="fade-in" loading="lazy" src="./images/profile-2.jpg" className='profile-picture' alt="profile" />
+                    <img data-aos="fade-in" src="./images/profile-2.jpg" className='profile-picture' alt="profile" />
                     <p data-aos="slide-up">
                         Madni Ansari
                         <span>ansarimadni11@gmail.com | 21yr old</span>
@@ -241,7 +241,7 @@ const Home = () => {
                 </div>
 
                 <div className='pattern right'>
-                    <img loading="lazy" src="./images/pattern.webp" alt="pattern" />
+                    <img src="./images/pattern.webp" alt="pattern" />
                 </div>
             </section>
 
@@ -254,22 +254,22 @@ const Home = () => {
                         <h4>My Internships</h4>
                         <div ref={helperRef} className='helper-container'>
                             <div src="./images/docs/letter-of-intership.jpeg" onClick={e => handleImageClick(e)} className='overlay' />
-                            <img loading="lazy" src="./images/click.gif" alt="click gif" />
+                            <img src="./images/click.gif" alt="click gif" />
                         </div>
 
-                        <img loading="lazy" title='Delta Thermoformers' src="./images/docs/letter-of-intership.jpeg" alt="letter-of-intership" onClick={e => handleImageClick(e)} />
-                        <img loading="lazy" title='Central Railway Loco Workshop' src="./images/docs/certificate-railway-internship.webp" alt="certificate-railway-internship" onClick={e => handleImageClick(e)} />
+                        <img title='Delta Thermoformers' src="./images/docs/letter-of-intership.jpeg" alt="letter-of-intership" onClick={e => handleImageClick(e)} />
+                        <img title='Central Railway Loco Workshop' src="./images/docs/certificate-railway-internship.webp" alt="certificate-railway-internship" onClick={e => handleImageClick(e)} />
                     </div>
                 </div>
 
                 <div data-aos="slide-up" className='achievement-container'>
                     <div className='achievement'>
                         <h4>Campus Ambassador Certificates</h4>
-                        <img loading="lazy" title='IIT Kharagpur' src="./images/docs/iit-kharagpur.webp" alt="iit-kharagpur" onClick={e => handleImageClick(e)} />
-                        <img loading="lazy" title='IIT Kharagpur - Tshirt' src="./images/docs/iit-kharagpur-tshirt-distribution.webp" alt="iit-kharagpur-tshirt-distribution" onClick={e => handleImageClick(e)} />
-                        <img loading="lazy" title='IIT Bombay' src="./images/docs/iit-bombay.webp" alt="iit-bombay" onClick={e => handleImageClick(e)} />
+                        <img title='IIT Kharagpur' src="./images/docs/iit-kharagpur.webp" alt="iit-kharagpur" onClick={e => handleImageClick(e)} />
+                        <img title='IIT Kharagpur - Tshirt' src="./images/docs/iit-kharagpur-tshirt-distribution.webp" alt="iit-kharagpur-tshirt-distribution" onClick={e => handleImageClick(e)} />
+                        <img title='IIT Bombay' src="./images/docs/iit-bombay.webp" alt="iit-bombay" onClick={e => handleImageClick(e)} />
                         <p className='subtitle mt-2'>Organized a workshop on robotics in our college in association with Techfest - IIT BOMBAY</p>
-                        <img loading="lazy" title='Techfest - IIT Bombay' src="./images/docs/iit-bombay-techfest.webp" alt="iit-kharagpur" onClick={e => handleImageClick(e)} />
+                        <img title='Techfest - IIT Bombay' src="./images/docs/iit-bombay-techfest.webp" alt="iit-kharagpur" onClick={e => handleImageClick(e)} />
                     </div>
                 </div>
 
@@ -286,14 +286,14 @@ const Home = () => {
                         <div data-aos="slide-up" className='achievement-container'>
                             <div className='achievement'>
                                 <h4>Certificate of Commitment</h4>
-                                <img loading="lazy" title='Certificate of Commitment' src="./images/docs/certificate-of-commitment.webp" alt="certificate-of-commitment" onClick={e => handleImageClick(e)} />
+                                <img title='Certificate of Commitment' src="./images/docs/certificate-of-commitment.webp" alt="certificate-of-commitment" onClick={e => handleImageClick(e)} />
                             </div>
                         </div>
                         <div data-aos="slide-up" className='achievement-container last-achievement'>
                             <div className='achievement'>
                                 <h4>DIPLOMA's Fest</h4>
                                 <p className='subtitle'>As core committee member, I contributed to the success of my diploma's fest with creative planning and teamwork.</p>
-                                <img loading="lazy" title='Torque 2019' src="./images/docs/certificate-torque.webp" alt="certificate-torque" onClick={e => handleImageClick(e)} />
+                                <img title='Torque 2019' src="./images/docs/certificate-torque.webp" alt="certificate-torque" onClick={e => handleImageClick(e)} />
                             </div>
                         </div>
                     </>
@@ -303,13 +303,13 @@ const Home = () => {
 
             <section id="testimonials" className='section' style={{ marginTop: "3rem" }}>
                 <div className='pattern left' style={{ marginBottom: "-3rem" }}>
-                    <img loading="lazy" src="./images/pattern.webp" alt="pattern" />
+                    <img src="./images/pattern.webp" alt="pattern" />
                 </div>
                 <h2 data-aos="fade-in">Hear from others</h2>
                 <div className='testimonial-container'>
                     <div className='testimonial'>
                         <div className='testimonial-header'>
-                            <img data-aos="fade-in" loading="lazy" src="./images/afaan-pawaskar.jpeg" className='profile-picture' alt="afaan-pawaskar profile" />
+                            <img data-aos="fade-in" src="./images/afaan-pawaskar.jpeg" className='profile-picture' alt="afaan-pawaskar profile" />
                             <div data-aos="fade-in">
                                 <h4>Afaan Pawaskar</h4>
                                 <span>Former technical secretary</span>
@@ -325,7 +325,7 @@ const Home = () => {
 
                     <div className='testimonial'>
                         <div className='testimonial-header'>
-                            <img data-aos="fade-in" loading="lazy" src="./images/arya-pillai.jpeg" className='profile-picture' alt="arya-pillai profile" />
+                            <img data-aos="fade-in" src="./images/arya-pillai.jpeg" className='profile-picture' alt="arya-pillai profile" />
                             <div data-aos="fade-in">
                                 <h4>Arya Pillai</h4>
                                 <span>Former cultural secretary</span>
@@ -341,7 +341,7 @@ const Home = () => {
 
                     <div className='testimonial'>
                         <div className='testimonial-header'>
-                            <img data-aos="fade-in" loading="lazy" src="./images/saud-shaikh.jpeg" className='profile-picture' alt="saud-shaikh profile" />
+                            <img data-aos="fade-in" src="./images/saud-shaikh.jpeg" className='profile-picture' alt="saud-shaikh profile" />
                             <div data-aos="fade-in">
                                 <h4>Saud Shaikh</h4>
                                 <span>Ex Student Batch 2023</span>
@@ -362,7 +362,7 @@ const Home = () => {
                 <h4 data-aos="fade-in">
                     Together, Let's Elevate Our College Experience! 🚀 Vote Madni Ansari for General Secretary and Unlock a Brighter Future! 🌟
                 </h4>
-                <img loading="lazy" src="./images/pattern-v-1.webp" className='pattern' alt="" />
+                <img src="./images/pattern-v-1.webp" className='pattern' alt="" />
             </section>
 
             <footer className="marquee-container">
