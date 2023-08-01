@@ -109,6 +109,10 @@ p b {
 .mt-1 {
     margin-top: 6px;
 }
+.mt-2{
+    margin-top: 16px;
+
+}
 
 .gap-1 {
     gap: 7px;

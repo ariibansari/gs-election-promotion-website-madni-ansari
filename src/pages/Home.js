@@ -265,9 +265,11 @@ const Home = () => {
                 <div data-aos="slide-up" className='achievement-container'>
                     <div className='achievement'>
                         <h4>Campus Ambassador Certificates</h4>
-                        <img loading="lazy" title='IIT Kharakpur - Tshirt Giveaway' src="./images/docs/iit-kharakpur-tshirt-distribution.webp" alt="iit-kharakpur-tshirt-distribution" onClick={e => handleImageClick(e)} />
+                        <img loading="lazy" title='IIT Kharagpur' src="./images/docs/iit-kharagpur.webp" alt="iit-kharagpur" onClick={e => handleImageClick(e)} />
+                        <img loading="lazy" title='IIT Kharagpur - Tshirt' src="./images/docs/iit-kharagpur-tshirt-distribution.webp" alt="iit-kharagpur-tshirt-distribution" onClick={e => handleImageClick(e)} />
                         <img loading="lazy" title='IIT Bombay' src="./images/docs/iit-bombay.webp" alt="iit-bombay" onClick={e => handleImageClick(e)} />
-                        <img loading="lazy" title='IIT Kharakpur' src="./images/temp/iit-kharakpur.jpeg" alt="iit-kharakpur" onClick={e => handleImageClick(e)} />
+                        <p className='subtitle mt-2'>Organized a workshop on robotics in our college in association with Techfest - IIT BOMBAY</p>
+                        <img loading="lazy" title='Techfest - IIT Bombay' src="./images/docs/iit-bombay-techfest.webp" alt="iit-kharagpur" onClick={e => handleImageClick(e)} />
                     </div>
                 </div>
 
