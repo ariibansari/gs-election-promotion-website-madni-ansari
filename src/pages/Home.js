@@ -154,9 +154,10 @@ const Home = () => {
                             General Seceratary Candidate -
                             <br />
                             Rizvi College of Engineering,
-                            <br />
-                            Final year mechanical engineering
                         </h3>
+                        <h4>
+                            Final year mechanical engineering
+                        </h4>
                         <a
                             className='button button-cta'
                             target='_blank'
